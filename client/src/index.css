@@ -1,0 +1,211 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+nav {
+  display: flex;
+  gap: 1.5rem; /* space between links */
+  background-color: #07182e; /* dark background to match your plant cards */
+  padding: 0.6rem;
+  border-radius: 8px;
+  justify-content: center; /* center links horizontally */
+  font-family: 'Arial', sans-serif;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+nav a:hover {
+  background-color: #00b7ff; /* highlight on hover */
+  color: #000;
+}
+
+nav a.active {
+  background-color: #ff30ff; /* highlight active page */
+  color: #000;
+}
+
+.plants-button {
+  text-decoration: none;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  width: 190px;
+  height: 270px; /* slightly smaller since no ID shown */
+  background: #07182e;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.card h2 {
+  z-index: 1;
+  color: white;
+  font-size: 1.2em;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.card img.card-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 15px;
+  z-index: 1;
+}
+
+.details-button {
+  margin-top: auto;
+  padding: 5px 10px;
+  background: #3a7f4c;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  z-index: 1; 
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+  height: 130%;
+  animation: rotBGimg 3s linear infinite;
+  transition: all 0.2s linear;
+}
+
+@keyframes rotBGimg {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  background: #07182e;
+  inset: 5px;
+  border-radius: 15px;
+}
+
+.plant-details-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+  min-height: 100vh;
+  background-color: #0b2035;
+  color: #fff;
+  border-radius: 15px;
+}
+
+.plant-details-container img {
+  max-width: 100%;   
+  max-height: 400px; 
+  height: auto;      
+  object-fit: contain; 
+  border-radius: 12px; 
+  display: block;
+  margin: 1rem auto; 
+}
+
+.add-plant-container h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.add-plant-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.add-plant-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+
+.add-plant-form textarea {
+  min-height: 80px;
+}
+
+.add-plant-form button {
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+}
