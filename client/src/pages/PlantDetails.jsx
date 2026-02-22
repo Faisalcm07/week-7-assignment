@@ -12,7 +12,7 @@ export default function PlantDetails() {
 
     useEffect(() => {
         async function fetchData() {
-            const res = await fetch(`http://localhost:3000/plants/${id}`)
+            const res = await fetch(`https://week-7-assignment-e3aj.onrender.com/plants/${id}`)
             const data = await res.json()
             console.log(data)
 

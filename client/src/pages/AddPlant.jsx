@@ -18,7 +18,7 @@ const handleChange = (e) => {
 
     
 
-    await fetch("http://localhost:3000/plants", {
+    await fetch("https://week-7-assignment-e3aj.onrender.com/plants", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),

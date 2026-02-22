@@ -8,7 +8,7 @@ export default function GetPlants() {
 
     useEffect(() => {
         async function fetchData() {
-            const data = await fetch(`http://localhost:3000/plants`)
+            const data = await fetch(`https://week-7-assignment-e3aj.onrender.com/plants`)
             const plantdata = await data.json()
             setplants(plantdata)
         }
