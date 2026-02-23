@@ -32,7 +32,7 @@ INSERT INTO categories (name, description, climate, soil_type) VALUES
 CREATE TABLE plant_categories (
   plant_id INT REFERENCES exotic_plants(id),
   category_id INT REFERENCES categories(id),
-  PRIMARY KEY (plant_id, category_id) -- cannot accidentally have duplicate entries.
+  PRIMARY KEY (plant_id, category_id) 
 )
 
 
