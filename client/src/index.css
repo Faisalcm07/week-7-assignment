@@ -29,11 +29,11 @@ h1 {
 
 nav {
   display: flex;
-  gap: 1.5rem; /* space between links */
-  background-color: #07182e; /* dark background to match your plant cards */
+  gap: 1.5rem; 
+  background-color: #07182e; 
   padding: 0.6rem;
   border-radius: 8px;
-  justify-content: center; /* center links horizontally */
+  justify-content: center; 
   font-family: 'Arial', sans-serif;
 }
 
@@ -47,12 +47,12 @@ nav a {
 }
 
 nav a:hover {
-  background-color: #00b7ff; /* highlight on hover */
+  background-color: 
   color: #000;
 }
 
 nav a.active {
-  background-color: #ff30ff; /* highlight active page */
+  background-color: #ff30ff; 
   color: #000;
 }
 
