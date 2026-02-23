@@ -12,8 +12,8 @@ function App() {
 
   return(
 
-    <div><h2 className="text-2xl font-mono text-amber-300">Plants App</h2>
-            <nav className="flex flex-row gap-5">
+    <div><h2>Plants App</h2>
+            <nav>
                 <Link to='/'>Home</Link>
                 <Link to='/plants'>Plants</Link>
                 <Link to='/addplant'>Add Plant</Link>
