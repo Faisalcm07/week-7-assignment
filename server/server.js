@@ -82,10 +82,7 @@ app.delete(`/plants/:id`, async (req, res) => {
 
      res.status(204).send(); })
 
-app.get('/categories', async (req, res) => {
-  const categories = (await db.query(`SELECT * FROM categories`)).rows
-  res.status(200).json(categories)
-})
+
 
 
 
